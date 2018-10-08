@@ -11,7 +11,6 @@ class Word {
         this.letterArr = ()=>{
             var arr = [];
             for (var i = 0; i < letterArr.length; i++){
-                console.log(letterArr[i]);
                 arr.push(new letterClass(letterArr[i]));
             }
             return arr;
@@ -20,12 +19,15 @@ class Word {
     }
 
     letterFunc(char){
+        
+        var arr = this.letterArr();
 
         for (var i = 0; i < this.letterArr.length; i++){
 
-            this.letterArr[i].check(char);
+            arr[i].check(char);
 
-            this.str += letterArr[i].getStr();
+            this.str += arr[i].getStr();
+            console.log(this.str);
         }
 
     }
@@ -36,7 +38,7 @@ class Word {
 
 var w = new Word('gio');
 
-w.letterArr();
+w.letterFunc('i');
 
 //1.
 // loop through letterArr 
