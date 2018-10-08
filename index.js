@@ -1,11 +1,7 @@
-class index {
-    constructor(string, bool) {
-        this.string = string;
-        this.bool =bool;
-    }
-    getStr(){
-        if (bool) 
-        return string;
-    }
+var inquirer = require("inquirer");
+var word = require("./Word");
+
+class Index {
+
     
 }
