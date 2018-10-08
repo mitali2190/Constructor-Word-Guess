@@ -7,12 +7,21 @@ var letterClass = require('./Letter');
 
 class Word {
 
-    constructor(letterArr){
+    constructor(word){
+
         this.letterArr = ()=>{
+
+            var wordArr = word.split('');
+
             var arr = [];
-            for (var i = 0; i < letterArr.length; i++){
-                arr.push(new letterClass(letterArr[i]));
+
+            for (var i = 0; i < wordArr.length; i++){
+
+                arr.push(new letterClass(wordArr[i]));
+
             }
+            console.log(arr)
+
             return arr;
         };
         this.str = '';
@@ -27,7 +36,7 @@ class Word {
             arr[i].check(char);
 
             this.str += arr[i].getStr();
-            console.log(this.str);
+            // console.log(this.str);
         }
 
     }
