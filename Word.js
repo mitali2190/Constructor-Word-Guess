@@ -31,13 +31,14 @@ class Word {
         
         var arr = this.letterArr();
 
-        for (var i = 0; i < this.letterArr.length; i++){
+        for (var i = 0; i < arr.length; i++){
 
             arr[i].check(char);
 
             this.str += arr[i].getStr();
-            // console.log(this.str);
         }
+        console.log(this.str);
+
 
     }
     
@@ -47,6 +48,7 @@ class Word {
 
 var w = new Word('gio');
 
+w.letterFunc('o');
 w.letterFunc('i');
 
 //1.
