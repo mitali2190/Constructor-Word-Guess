@@ -46,11 +46,11 @@ class Word {
 
 
 
-var w = new Word('giorgi');
+// var w = new Word('giorgi');
 
-w.findAndSetTrue('o');
-w.findAndSetTrue('i');
-w.findAndSetTrue('r');
+// w.findAndSetTrue('o');
+// w.findAndSetTrue('I');
+// w.findAndSetTrue('R');
 
 
 //1.

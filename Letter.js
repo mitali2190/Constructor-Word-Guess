@@ -10,9 +10,8 @@ class Letter {
             return '_';
     }
     check(toCheckChar){
-        if (this.storedChar == toCheckChar) {
+        if (this.storedChar.toLowerCase() == toCheckChar.toLowerCase()) {
             this.bool = true;
-            // console.log(this.getStr());
         }
     }
 }
