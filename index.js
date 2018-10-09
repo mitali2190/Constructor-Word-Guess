@@ -14,7 +14,8 @@ class Index {
         ];
         this.word = ()=>{
             let i = Math.floor(Math.random() * (this.wordsArr.length));
-            return this.wordsArr[i];
+            let wordObj = new Word(this.wordsArr[i]);
+            return wordObj;
         };
     }
     inquire(){
@@ -25,13 +26,15 @@ class Index {
                 name: "letter"
             }
         ]).then(function(inquirerResponse) {
-            console.log('inquire', inquirerResponse.letter);
+            var obj = this.word();
+            console.log(obj)
+            // console.log('inquire', inquirerResponse.letter);
         });
     }
 
     log(){
         this.inquire();
-        console.log(this.word());
+        // console.log(this.word());
     }
     
 }
