@@ -14,10 +14,6 @@ class Letter {
             this.bool = true;
             // console.log(this.getStr());
         }
-        else {
-            this.bool = false;
-            // console.log("!=")
-        }
     }
 }
 

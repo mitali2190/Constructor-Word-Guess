@@ -20,36 +20,38 @@ class Word {
                 arr.push(new letterClass(wordArr[i]));
 
             }
-            console.log(arr)
-
+            // console.log(arr)
             return arr;
         };
         this.str = '';
+        this.toShowWord  = this.letterArr();
     }
 
-    letterFunc(char){
+    findAndSetTrue(char){
         
-        var arr = this.letterArr();
+        this.str = '';
 
-        for (var i = 0; i < arr.length; i++){
+        for (var i = 0; i < this.toShowWord.length; i++){
 
-            arr[i].check(char);
+            this.toShowWord[i].check(char);
+            
+            if (this.toShowWord[i].bool) this.str += this.toShowWord[i].storedChar;
+            else this.str += '_';
 
-            this.str += arr[i].getStr();
         }
         console.log(this.str);
-
-
     }
     
 }
 
 
 
-var w = new Word('gio');
+var w = new Word('giorgi');
 
-w.letterFunc('o');
-w.letterFunc('i');
+w.findAndSetTrue('o');
+w.findAndSetTrue('i');
+w.findAndSetTrue('r');
+
 
 //1.
 // loop through letterArr 
