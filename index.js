@@ -1,10 +1,6 @@
 var inquirer = require("inquirer");
 var wordClass = require("./Word");
 
-// let wordObj = new wordClass('someName');
-
-// wordObj.findAndSetTrue('o');
-
 class Index {
     constructor(){
         this.wordsArr = [
@@ -37,6 +33,7 @@ class Index {
             if (obj.str.includes('_')) self.inquire();
         });
     }
+
 }
 
 var i = new Index();

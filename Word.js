@@ -20,7 +20,6 @@ class Word {
                 arr.push(new letterClass(wordArr[i]));
 
             }
-            // console.log(arr)
             return arr;
         };
         this.str = '';
@@ -46,25 +45,3 @@ class Word {
 
 
 module.exports = Word;
-
-// var w = new Word('giorgi');
-
-// w.findAndSetTrue('o');
-// w.findAndSetTrue('I');
-// w.findAndSetTrue('R');
-
-
-
-
-
-
-
-//1.
-// loop through letterArr 
-//str += getStr()
-//return str
-
-//2.
-// func(char){
-// letter.check(char)
-//}

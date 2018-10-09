@@ -17,8 +17,3 @@ class Letter {
 }
 
 module.exports = Letter;
-
-// var a = new Letter('a');
-
-// a.check("c");
-// console.log(a.getStr());
