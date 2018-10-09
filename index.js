@@ -1,5 +1,9 @@
 var inquirer = require("inquirer");
-var word = require("./Word");
+var wordClass = require("./Word");
+
+// let wordObj = new wordClass('someName');
+
+// wordObj.findAndSetTrue('o');
 
 class Index {
     constructor(){
@@ -14,11 +18,13 @@ class Index {
         ];
         this.word = ()=>{
             let i = Math.floor(Math.random() * (this.wordsArr.length));
-            let wordObj = new Word(this.wordsArr[i]);
+            let wordObj = new wordClass(this.wordsArr[i]);
             return wordObj;
         };
+        this.wordToGuess = this.word();
     }
     inquire(){
+        var self = this;
         inquirer.prompt([
             {
                 type: 'input',
@@ -26,20 +32,13 @@ class Index {
                 name: "letter"
             }
         ]).then(function(inquirerResponse) {
-            var obj = this.word();
-            console.log(obj)
-            // console.log('inquire', inquirerResponse.letter);
+            var obj = self.wordToGuess;
+            obj.findAndSetTrue(inquirerResponse.letter);
+            if (obj.str.includes('_')) self.inquire();
         });
     }
-
-    log(){
-        this.inquire();
-        // console.log(this.word());
-    }
-    
 }
-
 
 var i = new Index();
 
-i.log();
+i.inquire();
